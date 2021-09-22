@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body, html{
+overflow: hidden;
+}
+nav{
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%
+}
+#checkbox-menu,
+.toggle{
+    display: none;
+}
+
+.menu{
+    padding: 0;
+    margin: 0;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+.menu  li a {
+    color: black;
+    text-decoration: none;
+    align-self: center;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.2s linear;
+}
+.menu li a:hover{
+    background: red;
+    border-radius: 7px;
+}
+
+.menu li a.Logo {
+    font-size: 26px;
+    margin: right 230px;
+}
+
+.menu li a.Contact{
+    margin-right: 100px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 100%;
+    /*возможно тут ошибка ииза которой не показывает 
+    блок <section class="stats wrapper">*/
+    
+    
+    
+}
+
+.intro {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.intro-img{
+    background-image: url(/img/img4.jpg);
+    width: 1200px;
+    height: 400px; /*изменил размеры картинки и блока в целом 
+    в html пробовал <img src="/img/img5.jpg"alt="фон блока"style="position: top: 
+    ;;width: 965px;height: 400px;"> проблему вместимости блока илил видимости н решило*/
+    position: relative;
+}
+
+.intro .intro-text{
+    position: absolute;
+    color: rgb(248, 0, 0);
+    text-shadow: #fff 2px 0 4px;
+    font-size: 42px;
+    right:  550px;
+    top:85px;
+}
+/*.intro-text{
+    max-width: 520px;
+    position: absolute;
+    font-size: 62px;
+    top: 150px;
+    left: -120px;
+}*/
+
+.intro-contacts{/*мелкое красное меню*/
+    background-color: red;
+    max-width: 590px;
+    position: absolute;
+    right: 87px;
+    top: 400px;
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 15px;
+
+}
+
+.intro-contacts i{
+    color: white;
+    margin-right: 5px;
+}
+
+.intro-contacts p{
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.stats{
+    display: flex;
+    margin-top: 10px;/* чем больше пикселей тем ниже опускается и не видно блок*/
+    /*height: 600px; % или auto не помоло */
+}
+
+.stats-line{
+    display: flex;
+}
+
+.stats-text{
+    padding: 40px;
+}
+
+.stats-text h2{
+    font-size: 40px;
+    margin-bottom: 70px;
+}
+
+.stats-text p{
+    margin-top: 50px;
+    font-size: 13px;
+    line-height: 27px;
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: thistle;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.stats-square{
+    font-size: 40px;
+    color: red;
+    margin-bottom: 13px;
+}
+
+.square-text{
+    font-size: 14px;
+}
+
+.steps h2{
+    margin-top: 55px;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.steps-text{
+    line-height: 27px;
+    font-size: 13px;
+
+}
+.mbtext{
+    margin-bottom: 70px;
+}
+
+.stepblock{
+    width: 340px;
+    height: 370px;
+    background: white;
+    box-shadow: 0 0 20px #000000;
+    overflow: hidden;
+}
+
+.stepblock .step-num{
+    font-size: 200px;
+    position: relative;
+    top: -120px;
+    left: -30px;
+}
+
+.stepblock:hover{
+    background: red;
+    color: #fff;
+
+}
+.steps-container{
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.stepblock h4{
+    font-style: 14px;
+    margin-left: 40px;
+    margin-top: -100px;
+    margin-bottom: 20px;
+}
+.stepblock h4 span{
+    margin-right: 15px;
+}
+.stepblock .step-info{
+    margin-left: 70px;
+    line-height: 29px;
+}
+
+.stepblock ..stepblock{
+    display: inline-block;
+    margin-left: 70px;
+    margin-top: 20px;
+    border-bottom: 3px solid #000000;
+}
+
+
+@media screen and (max-width: 750px) {
+    .toggle{
+        clear: both;
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        line-height: 40px;
+        width: 100%;
+        color: black;
+        background-color: red;
+        transition: all .1s linear;
+        
+    }
+    .toggle:hover{
+        background-color: rgb(190, 5, 5);
+
+    }
+    #checkbox-menu:checked + label .touch li {
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s linear;
+    }
+    #checkbox-menu:checked + label .touch{
+        height: 350px;
+    }
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 0px;
+        transition: height .3s linear;
+    }
+    .menu li{
+        display: flex;
+        align-self: center;
+        width: 95%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu li a{
+        width: 95%;
+        text-align: center;
+        align-self: center;
+        align-content: center;
+    }
+    .menu li a.Logo {
+        font-size: 21px;
+        margin: right 0px;
+    }
+
+    .menu li a.Contact {
+        margin-right: 0px;
+    }
+    .intro{
+        margin-top: 0;
+        display: block;
+        max-width: 100%;
+        
+    }
+    .intro-img{
+        background-position: bottom 30px;
+        right: 30px;/*размеры картинки моб меню*/
+
+    }
+    .intro .intro-text{
+        position: relative;
+        font-size: 25px;
+        right: -10px;
+        text-align: 95px; /*не поддерживается браузерами на что менять не знаю*/ 
+    }
+    .intro .intro-contacts{
+        right: 0;
+        top: -60px;
+        padding: 20px 10px;
+        position: relative;
+    }
+    .intro-contacts i{
+        margin-right: 10px;
+
+    }
+    .intro-contacts p{
+        font-size: 10px;
+        margin-right: 0;
+    }
+    .stats{
+        margin-top: 0;
+        flex-direction:column;
+
+    }
+    .stats-text{
+        padding: 10px;
+
+    }
+
+    .stats-text h2{
+        font-size: 10px;
+        margin-bottom: 10px;
+
+    }
+    .stats-text p{
+        margin-top: 5px;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .square{
+        height: 140px;
+    }
+    .steps-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .stepblock{
+        margin-top: 20px;
+    }
+    .steps-text, .steps h2{
+        margin-left: 5%;
+    }
+
